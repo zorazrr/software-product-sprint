@@ -16,6 +16,10 @@
     max-width: 100px;
 }
 
+#projects {
+    margin-bottom: 20px;
+}
+
 #name {
     display: flex;
     flex-direction: column;

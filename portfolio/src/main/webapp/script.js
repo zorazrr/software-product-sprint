@@ -20,7 +20,8 @@ function addRandomFact() {
       ['I love anything matcha flavored.', 
        'My name has the meaning of sunrise and dawn.',
        'I like Marvel Movies.',
-       'I am trying to learn ice skating.'];
+       'I am trying to learn ice skating.',
+       'My favorite anime is The Promised Neverland.'];
 
   // Pick a random fun fact.
   const fact = facts[Math.floor(Math.random() * facts.length)];
