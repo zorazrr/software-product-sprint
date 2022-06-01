@@ -4,6 +4,20 @@
   width: 650px;
 }
 
-#greeting-container {
+#header {
+    margin-bottom:20px !important;
+}
+
+#pfp {
+    max-width:100px;
+}
+
+#name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#fact-container {
   margin-top: 20px;
 }
