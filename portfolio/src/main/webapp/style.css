@@ -5,11 +5,15 @@
 }
 
 #header {
-    margin-bottom:20px !important;
+    margin: 20px 0px;
+}
+
+#header-intro {
+    margin-bottom: 2px;
 }
 
 #pfp {
-    max-width:100px;
+    max-width: 100px;
 }
 
 #name {
@@ -18,6 +22,16 @@
     justify-content: center;
 }
 
+#contacts i {
+    margin-right:10px;
+    color: #0d6efd;
+}
+
+#contacts i:hover {
+    opacity: 0.5;
+}
+
 #fact-container {
   margin-top: 20px;
+  color: #0d6efd;
 }
