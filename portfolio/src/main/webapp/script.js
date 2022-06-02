@@ -30,3 +30,8 @@ function addRandomFact() {
   const factContainer = document.getElementById('fact-container');
   factContainer.innerText = fact;
 }
+
+// Dark Mode Toggle Control 
+document.getElementById('dark-mode-toggle').onclick = function(e){
+    darkmode.toggleDarkMode();
+  }

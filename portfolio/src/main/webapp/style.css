@@ -4,6 +4,19 @@
   width: 650px;
 }
 
+#dark-mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: lightgray;
+    background: none;
+    border: none;
+}
+
+#dark-mode-toggle:hover {
+    opacity: 0.5;
+}
+
 #header {
     margin: 20px 0px;
 }
