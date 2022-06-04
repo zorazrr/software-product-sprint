@@ -5,47 +5,47 @@
 }
 
 #dark-mode-toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    color: lightgray;
-    background: none;
-    border: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: gray;
+  background: none;
+  border: none;
 }
 
 #dark-mode-toggle:hover {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 #header {
-    margin: 20px 0px;
+  margin: 20px 0px;
 }
 
 #header-intro {
-    margin-bottom: 2px;
+  margin-bottom: 2px;
 }
 
 #pfp {
-    max-width: 100px;
+  max-width: 100px;
 }
 
 #projects {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 #name {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #contacts i {
-    margin-right:10px;
-    color: #0d6efd;
+  margin-right: 10px;
+  color: #0d6efd;
 }
 
 #contacts i:hover {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 #fact-container {
