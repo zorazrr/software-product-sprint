@@ -1,14 +1,13 @@
 #content {
   margin-left: auto;
   margin-right: auto;
-  width: 650px;
+  position: relative;
 }
 
 #dark-mode-toggle {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  color: gray;
+  right: 10px;
+  color: lightslategray;
   background: none;
   border: none;
 }
@@ -51,4 +50,10 @@
 #fact-container {
   margin-top: 20px;
   color: #0d6efd;
+}
+
+@media only screen and (min-width: 700px) {
+  #content {
+    width: 650px;
+  }
 }
