@@ -13,16 +13,25 @@
 // limitations under the License.
 
 /**
- * Adds a random greeting to the page.
+ * Adds a random fun fact about myself to the page.
  */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+function addRandomFact() {
+  const facts =
+      ['I love anything matcha flavored.', 
+       'My name has the meaning of sunrise and dawn.',
+       'I like Marvel Movies.',
+       'I am trying to learn ice skating.',
+       'My favorite anime is The Promised Neverland.'];
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+  // Pick a random fun fact.
+  const fact = facts[Math.floor(Math.random() * facts.length)];
 
   // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+  const factContainer = document.getElementById('fact-container');
+  factContainer.innerText = fact;
 }
+
+// Dark Mode Toggle Control 
+document.getElementById('dark-mode-toggle').onclick = function(e){
+    darkmode.toggleDarkMode();
+  }

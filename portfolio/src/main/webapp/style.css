@@ -1,9 +1,59 @@
 #content {
   margin-left: auto;
   margin-right: auto;
-  width: 650px;
+  position: relative;
 }
 
-#greeting-container {
+#dark-mode-toggle {
+  position: absolute;
+  right: 10px;
+  color: lightslategray;
+  background: none;
+  border: none;
+}
+
+#dark-mode-toggle:hover {
+  opacity: 0.5;
+}
+
+#header {
+  margin: 20px 0px;
+}
+
+#header-intro {
+  margin-bottom: 2px;
+}
+
+#pfp {
+  max-width: 100px;
+}
+
+#projects {
+  margin-bottom: 20px;
+}
+
+#name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#contacts i {
+  margin-right: 10px;
+  color: #0d6efd;
+}
+
+#contacts i:hover {
+  opacity: 0.5;
+}
+
+#fact-container {
   margin-top: 20px;
+  color: #0d6efd;
+}
+
+@media only screen and (min-width: 700px) {
+  #content {
+    width: 650px;
+  }
 }
