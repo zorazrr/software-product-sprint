@@ -16,22 +16,32 @@
  * Adds a random fun fact about myself to the page.
  */
 function addRandomFact() {
-  const facts =
-      ['I love anything matcha flavored.', 
-       'My name has the meaning of sunrise and dawn.',
-       'I like Marvel Movies.',
-       'I am trying to learn ice skating.',
-       'My favorite anime is The Promised Neverland.'];
+  const facts = [
+    "I love anything matcha flavored.",
+    "My name has the meaning of sunrise and dawn.",
+    "I like Marvel Movies.",
+    "I am trying to learn ice skating.",
+    "My favorite anime is The Promised Neverland.",
+  ];
 
   // Pick a random fun fact.
   const fact = facts[Math.floor(Math.random() * facts.length)];
 
   // Add it to the page.
-  const factContainer = document.getElementById('fact-container');
+  const factContainer = document.getElementById("fact-container");
   factContainer.innerText = fact;
 }
 
-// Dark Mode Toggle Control 
-document.getElementById('dark-mode-toggle').onclick = function(e){
-    darkmode.toggleDarkMode();
-  }
+/**
+ * Gets page view message from hello endpoint.
+ */
+async function getMessage() {
+  const res = await fetch("/hello");
+  const message = await res.text();
+  document.getElementById("message-container").innerText = message;
+}
+
+// Dark Mode Toggle Control
+document.getElementById("dark-mode-toggle").onclick = function (e) {
+  darkmode.toggleDarkMode();
+};
