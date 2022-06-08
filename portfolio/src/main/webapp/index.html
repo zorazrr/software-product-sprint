@@ -99,9 +99,24 @@
 
         <h2>Contact Me</h2>
         <form action="/form-handler" method="POST" id="message-form">
-          Leave me a message here:
-          <input type="text" name="text-input" />
-          <button type="submit" class="btn btn-light">Submit</button>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"
+              >Email address</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="exampleFormControlInput1"
+              placeholder="name@example.com"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="text-input" class="form-label"
+              >Leave a message here:</label
+            >
+            <textarea class="form-control" id="text-input" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
         </form>
 
         <h2>Fun</h2>
