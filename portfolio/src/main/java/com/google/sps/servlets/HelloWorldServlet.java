@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/** Servlet that returns HTML that contains the page view count. */
+/** Servlet that returns an array of lyrics. */
 @WebServlet("/hello")
 public class HelloWorldServlet extends HttpServlet {
 

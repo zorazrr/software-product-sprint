@@ -33,7 +33,7 @@ function addRandomFact() {
 }
 
 /**
- * Gets page view message from hello endpoint.
+ * Gets messages as json from hello endpoint. Randomly select one.
  */
 async function getMessage() {
   const res = await fetch("/hello");
@@ -42,7 +42,9 @@ async function getMessage() {
   document.getElementById("message-container").innerText = oneMessage;
 }
 
-// Dark Mode Toggle Control
+/**
+ * Dark Mode Toggle Control
+ */
 document.getElementById("dark-mode-toggle").onclick = function (e) {
   darkmode.toggleDarkMode();
 };
