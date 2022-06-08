@@ -38,6 +38,7 @@ function addRandomFact() {
 async function getMessage() {
   const res = await fetch("/hello");
   const message = await res.text();
+  console.log(typeof message);
   document.getElementById("message-container").innerText = message;
 }
 
