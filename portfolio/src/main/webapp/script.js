@@ -37,9 +37,9 @@ function addRandomFact() {
  */
 async function getMessage() {
   const res = await fetch("/hello");
-  const message = await res.text();
-  console.log(typeof message);
-  document.getElementById("message-container").innerText = message;
+  const message = await res.json();
+  const oneMessage = message[Math.floor(Math.random() * message.length)];
+  document.getElementById("message-container").innerText = oneMessage;
 }
 
 // Dark Mode Toggle Control
