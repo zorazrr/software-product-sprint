@@ -70,7 +70,7 @@
           and visual design.
         </p>
 
-        <h2>Projects</h2>
+        <h3>Projects</h3>
         <p>Projects I was involved in :)</p>
         <ul class="list-group" id="projects">
           <li class="list-group-item">
@@ -97,29 +97,36 @@
           </li>
         </ul>
 
-        <h2>Contact Me</h2>
+        <h3>Contact Me</h3>
         <form action="/form-handler" method="POST" id="message-form">
           <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label"
-              >Email address</label
-            >
+            <label for="email" class="form-label">Email address</label>
             <input
               type="email"
               class="form-control"
-              id="exampleFormControlInput1"
+              name="email"
+              id="email"
               placeholder="name@example.com"
+              required
             />
           </div>
           <div class="mb-3">
-            <label for="text-input" class="form-label"
-              >Leave a message here:</label
+            <label for="message" class="form-label"
+              >Leave a message for me</label
             >
-            <textarea class="form-control" id="text-input" rows="3"></textarea>
+            <textarea
+              class="form-control"
+              name="message"
+              id="message"
+              rows="3"
+              placeholder="your message"
+              required
+            ></textarea>
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
 
-        <h2>Fun</h2>
+        <h3>Fun</h3>
         <p>
           To get a random fun fact about me
           <button type="button" class="btn btn-light" onclick="addRandomFact()">
