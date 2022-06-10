@@ -16,22 +16,35 @@
  * Adds a random fun fact about myself to the page.
  */
 function addRandomFact() {
-  const facts =
-      ['I love anything matcha flavored.', 
-       'My name has the meaning of sunrise and dawn.',
-       'I like Marvel Movies.',
-       'I am trying to learn ice skating.',
-       'My favorite anime is The Promised Neverland.'];
+  const facts = [
+    "I love anything matcha flavored.",
+    "My name has the meaning of sunrise and dawn.",
+    "I like Marvel Movies.",
+    "I am trying to learn ice skating.",
+    "My favorite anime is The Promised Neverland.",
+  ];
 
   // Pick a random fun fact.
   const fact = facts[Math.floor(Math.random() * facts.length)];
 
   // Add it to the page.
-  const factContainer = document.getElementById('fact-container');
+  const factContainer = document.getElementById("fact-container");
   factContainer.innerText = fact;
 }
 
-// Dark Mode Toggle Control 
-document.getElementById('dark-mode-toggle').onclick = function(e){
-    darkmode.toggleDarkMode();
-  }
+/**
+ * Gets messages as json from hello endpoint. Randomly select one.
+ */
+async function getMessage() {
+  const res = await fetch("/hello");
+  const message = await res.json();
+  const oneMessage = message[Math.floor(Math.random() * message.length)];
+  document.getElementById("message-container").innerText = oneMessage;
+}
+
+/**
+ * Dark Mode Toggle Control
+ */
+document.getElementById("dark-mode-toggle").onclick = function (e) {
+  darkmode.toggleDarkMode();
+};
