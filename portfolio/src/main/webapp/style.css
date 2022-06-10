@@ -34,6 +34,9 @@
 
 #message-form {
   margin-bottom: 20px;
+  border-radius: 0.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 0.5rem 1rem;
 }
 
 #name {
@@ -53,10 +56,6 @@
 
 #fact-container {
   margin-top: 20px;
-  color: #0d6efd;
-}
-
-#message-container {
   color: #0d6efd;
 }
 

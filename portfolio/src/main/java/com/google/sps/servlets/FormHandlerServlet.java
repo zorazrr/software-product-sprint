@@ -15,7 +15,7 @@ public class FormHandlerServlet extends HttpServlet {
         // Get the value entered in the form.
         String message = request.getParameter("message");
         String email = request.getParameter("email");
-        String forfun = request.getParameter("forfun");
+        String forFun = request.getParameter("forFun");
 
         // Print the value so you can see it in the server logs.
         System.out.println("User Email: " + email);
@@ -27,7 +27,7 @@ public class FormHandlerServlet extends HttpServlet {
         response.getWriter().println("<br/>");
         response.getWriter().println("Your Message: " + message);
         response.getWriter().println("<br/>");
-        if ("coffee".equals(forfun)) {
+        if ("coffee".equals(forFun)) {
             response.getWriter().println(
                     "<img src = \" https://danverspublicschools.org/dhs/wp-content/uploads/sites/4/2017/09/coffee-clipart-free-coffee-cup-clipart.jpg \"/>");
         } else {
