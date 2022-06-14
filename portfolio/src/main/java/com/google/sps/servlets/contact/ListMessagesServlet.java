@@ -39,7 +39,6 @@ public class ListMessagesServlet extends HttpServlet {
             messages.add(newMessage);
         }
 
-        System.out.println(messages);
         Gson gson = new Gson();
         response.setContentType("application/json");
         response.getWriter().println(gson.toJson(messages));
