@@ -46,8 +46,8 @@ async function getMessage() {
  * Gets contact-me form messages then render
  */
 async function loadMessages() {
+    const board = document.getElementById('message-board');
     fetch("/list-messages").then(res => res.json()).then((messages) => {
-        const board = document.getElementById('message-board');
         messages.forEach((message) => {
             board.appendChild(createCard(message));
         })
