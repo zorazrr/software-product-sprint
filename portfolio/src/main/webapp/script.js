@@ -70,7 +70,7 @@ function createCard(message) {
         + `<div class = 'card-body'>`
         + message.message
         + `<br/>`
-        + `<small class="text-muted"> This person likes `
+        + `<small class="text-muted"> this person likes `
         + message.drink
         + `</small>`
         + `</div>`;

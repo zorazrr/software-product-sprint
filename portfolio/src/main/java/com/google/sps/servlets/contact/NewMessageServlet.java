@@ -31,6 +31,6 @@ public class NewMessageServlet extends HttpServlet {
                 .set("timestamp", timestamp)
                 .build();
         datastore.put(messageEntity);
-        response.sendRedirect("/index.html");
+        response.sendRedirect("messages.html");
     }
 }
