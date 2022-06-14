@@ -1,4 +1,4 @@
-package com.google.sps.servlets.form;
+package com.google.sps.servlets.contact;
 
 import com.google.cloud.datastore.Datastore;
 import com.google.cloud.datastore.DatastoreOptions;
