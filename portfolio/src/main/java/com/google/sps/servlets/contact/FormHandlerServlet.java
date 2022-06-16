@@ -1,4 +1,4 @@
-package com.google.sps.servlets;
+package com.google.sps.servlets.contact;
 
 import java.io.IOException;
 import javax.servlet.annotation.WebServlet;
@@ -32,7 +32,7 @@ public class FormHandlerServlet extends HttpServlet {
                     "<img src = \" https://danverspublicschools.org/dhs/wp-content/uploads/sites/4/2017/09/coffee-clipart-free-coffee-cup-clipart.jpg \"/>");
         } else {
             response.getWriter().println(
-                "<img src = \" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFLBQ8ONYNSWejYsN7i4E7KDhpW9yk061qhA&usqp=CAU \"/>");
+                    "<img src = \" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFLBQ8ONYNSWejYsN7i4E7KDhpW9yk061qhA&usqp=CAU \"/>");
         }
     }
 }
