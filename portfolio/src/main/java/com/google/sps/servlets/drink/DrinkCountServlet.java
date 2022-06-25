@@ -5,9 +5,11 @@ import com.google.cloud.datastore.DatastoreOptions;
 import com.google.cloud.datastore.Entity;
 import com.google.cloud.datastore.Query;
 import com.google.cloud.datastore.QueryResults;
+import com.google.cloud.datastore.StructuredQuery.PropertyFilter;
 import com.google.gson.Gson;
 import java.io.IOException;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -18,19 +20,27 @@ public class DrinkCountServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
-        Query<Entity> query = Query.newEntityQueryBuilder().setKind("Message").build();
-        QueryResults<Entity> results = datastore.run(query);
+        // Query to get coffee count
+        Query<Entity> coffeeQuery = Query.newEntityQueryBuilder().setKind("Message")
+                .setFilter(PropertyFilter.eq("drink", "coffee")).build();
+        QueryResults<Entity> cofeeResults = datastore.run(coffeeQuery);
         int coffeeCount = 0;
-        int teaCount = 0;
-        while (results.hasNext()) {
-            Entity entity = results.next();
-            String drink = entity.getString("drink");
-            if (drink.equals("coffee")) {
-                coffeeCount++;
-            } else {
-                teaCount++;
-            }
+        while (cofeeResults.hasNext()) {
+            Entity entity = cofeeResults.next();
+            coffeeCount++;
         }
+
+        // Query to get tea count
+        Query<Entity> teaQuery = Query.newEntityQueryBuilder().setKind("Message")
+                .setFilter(PropertyFilter.eq("drink", "tea")).build();
+        QueryResults<Entity> teaResults = datastore.run(teaQuery);
+        int teaCount = 0;
+        while (teaResults.hasNext()) {
+            Entity entity = teaResults.next();
+            teaCount++;
+        }
+
+        // Return results in json
         Map<String, Integer> drinkMap = new HashMap<String, Integer>();
         drinkMap.put("coffee", coffeeCount);
         drinkMap.put("tea", teaCount);
