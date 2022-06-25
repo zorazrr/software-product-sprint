@@ -12,6 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+google.charts.load('current', { 'packages': ['corechart'] });
+google.charts.setOnLoadCallback(drawChart);
+
 /**
  * Adds a random fun fact about myself to the page.
  */
@@ -75,6 +78,32 @@ function createCard(message) {
         + `</small>`
         + `</div>`;
     return block;
+}
+
+/**
+ * Gets drink data from datastore (coffee v tea)
+ */
+async function getData() {
+    const res = await fetch("/drink-count");
+    const data = await res.json();
+    return data;
+}
+
+/** Creates a chart and adds it to the page. */
+async function drawChart() {
+    const drinkCount = await getData();
+    const data = new google.visualization.DataTable();
+    data.addColumn('string', 'Drink');
+    data.addColumn('number', 'Count');
+    data.addRows([["Coffee", drinkCount.coffee], ["Tea", drinkCount.tea]]);
+    const options = {
+        'title': 'Coffee v Tea',
+        'pieHole': 0.4,
+        'colors': ['#BED6FB', '#0E6DFD']
+    };
+    const chart = new google.visualization.PieChart(
+        document.getElementById('chart-container'));
+    chart.draw(data, options);
 }
 
 /**
